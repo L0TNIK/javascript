@@ -1,18 +1,27 @@
+
 <!DOCTYPE html>
  <head>
  <title> proste obliczenia</title>
  <meta charset="utf-8">
  </head>
 <body>
-<div style="color:red;font-size:50px;">
+<div style="color:green;font-size:50px;">
  <script language="JavaScript">
-var liczba1=prompt("liczba1=","");
-var liczba2=prompt("liczba2=","");
-var suma;
- var a=parseFloat(liczba1);
- var b=parseFloat(liczba2);
- suma=a+b;
- document.write("suma="+a+" + "+b+" = "+suma+"<br>");
+let d1_kam=prompt("dzien1=","");
+let d2_kam=prompt("dzien2=","");
+let suma;
+ let d1=parseFloat(d1_kam);
+ let d2=parseFloat(d2_kam);
+ dzien=86400;
+ if(d1>d2){
+ suma=(d1*86400)-(d2*86400);
+ 
+ 
+}
+else{
+    suma=(d2*86400)-(d1*86400);
+}
+document.write(suma + " sekund" + "<br>");
  </script>
 </div>
 </body>
