@@ -1,33 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Egyptian Fractions</title>
     <style>
-        div {
-            color: green;
-            font-size: 50px;
-        }
+      div {
+        color: green;
+        font-size: 50px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <script language="JavaScript">
-            let a = parseInt(prompt("Podaj pierwsza liczbę",""));
-        let b = parseInt(prompt("Podaj drugą liczbę",""));
-        document.write("Wczytane liczby:      a="+a+"   b="+b+"<br>");
-        let e1 = (a*a*a);
-        let e2 = 3*(a*a)*b;
-        let e3 = 3*a*(b*b);
-        let e4 = (b*b*b);
+      <script language="JavaScript">
+        let a = parseInt(prompt("Podaj pierwsza liczbę", ""));
+        let b = parseInt(prompt("Podaj drugą liczbę", ""));
+        document.write("Wczytane liczby:      a=" + a + "   b=" + b + "<br>");
+        let e1 = a * a * a;
+        let e2 = 3 * (a * a) * b;
+        let e3 = 3 * a * (b * b);
+        let e4 = b * b * b;
 
-        let wynik = e1+e2+e3+e4;
+        let wynik = e1 + e2 + e3 + e4;
 
-        document.write("("+a+"+"+b+")^3 = "+a+"^3 + 3*("+a+"^2)*"+b+" + 3*"+a+"*"+b+"^2 + "+b+"^3 = ");
-        document.write(e1 +" + "+e2+" + "+e3+" + "+e4 +" = "+wynik);
-        </script>
+        document.write(
+          "(" +
+            a +
+            "+" +
+            b +
+            ")^3 = " +
+            a +
+            "^3 + 3*(" +
+            a +
+            "^2)*" +
+            b +
+            " + 3*" +
+            a +
+            "*" +
+            b +
+            "^2 + " +
+            b +
+            "^3 = "
+        );
+        document.write(
+          e1 + " + " + e2 + " + " + e3 + " + " + e4 + " = " + wynik
+        );
+      </script>
     </div>
-</body>
+  </body>
 </html>
-

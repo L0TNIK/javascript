@@ -1,30 +1,28 @@
-
 <!DOCTYPE html>
- <head>
- <title> proste obliczenia</title>
- <meta charset="utf-8">
- </head>
-<body>
-<div style="color:green;font-size:50px;">
- <script language="JavaScript">
-let d1_kam=prompt("podaj dzien 1 stycznia (1-31)=","");
-let g1_kam=prompt("podaj 1 godzine stycznia (1-24)=","");
-let d2_kam=prompt("podaj dzien 1 stycznia (1-31)=","");
-let g2_kam=prompt("podaj 2 godzine stycznia (1-24)=","");
-let suma;
-let d1=parseFloat(d1_kam);
- let g1=parseFloat(g1_kam);
- let d2=parseFloat(d2_kam);
- let g2=parseFloat(g2_kam);
- dzien=86400;
- godzina=3600;
- 
- suma=((d1*dzien-1)+(g1*godzina))-((d2*dzien-1)+(g2*godzina));
- 
- 
+<html lang="en">
+  <head>
+    <title>proste obliczenia</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div style="color: green; font-size: 50px">
+      <script language="JavaScript">
+        let d1_kam = prompt("podaj dzien 1 stycznia (1-31)=", "");
+        let g1_kam = prompt("podaj 1 godzine stycznia (1-24)=", "");
+        let d2_kam = prompt("podaj dzien 1 stycznia (1-31)=", "");
+        let g2_kam = prompt("podaj 2 godzine stycznia (1-24)=", "");
+        let suma;
+        let d1 = parseFloat(d1_kam);
+        let g1 = parseFloat(g1_kam);
+        let d2 = parseFloat(d2_kam);
+        let g2 = parseFloat(g2_kam);
+        dzien = 86400;
+        godzina = 3600;
 
-document.write(suma + " sekund" + "<br>");
- </script>
-</div>
-</body>
+        suma = d1 * dzien - 1 + g1 * godzina - (d2 * dzien - 1 + g2 * godzina);
+
+        document.write(suma + " sekund" + "<br>");
+      </script>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read-Only Textarea</title>
+  </head>
+  <body>
+    <textarea width="1000" height="600" readonly>
+
+      <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        color: green;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <script>
+        let xa = prompt("podaj xa", "");
+        let ya = prompt("podaj ya", "");
+        let xb = prompt("podaj xb", "");
+        let yb = prompt("podaj yb", "");
+        let xc = prompt("podaj xc", "");
+        let yc = prompt("podaj yc", "");
+
+        let xa1 = parseFloat(xa);
+        let ya1 = parseFloat(ya);
+        let xb1 = parseFloat(xb);
+        let yb1 = parseFloat(yb);
+        let xc1 = parseFloat(xc);
+        let yc1 = parseFloat(yc);
+
+        function ab_kam() {
+          return Math.sqrt(Math.pow(xb1 - xa1, 2) + Math.pow(yb1 - ya1, 2));
+        }
+        function bc_kam() {
+          return Math.sqrt(Math.pow(xc1 - xb1, 2) + Math.pow(yc1 - yb1, 2));
+        }
+        function ac_kam() {
+          return Math.sqrt(Math.pow(xa1 - xc1, 2) + Math.pow(ya1 - yc1, 2));
+        }
+
+        document.write("długość boku AB = " + ab_kam() + "<br>");
+        document.write("długość boku BC = " + bc_kam() + "<br>");
+        document.write("długość boku AC = " + ac_kam() + "<br>");
+      </script>
+    </div>
+  </body>
+</html>
+
+      
+    </textarea>
+  </body>
+</html>
