@@ -12,35 +12,49 @@
     </style>
   </head>
   <body>
-    <div>
+    <div id="nazwa">
+      <input type="text" id="obwod" placeholder="podaj xa" /><br />
+      <input type="text" id="obwod1" placeholder="podaj xb" /><br />
+      <input type="text" id="obwod2" placeholder="podaj xc" /><br />
+      <input type="text" id="obwod3" placeholder="podaj ya" /><br />
+      <input type="text" id="obwod4" placeholder="podaj yb" /><br />
+      <input type="text" id="obwod5" placeholder="podaj yc" /><br />
+      <button onclick="wykonano()">oblicz</button>
+      <div id="wyniki"></div>
       <script>
-        let xa = prompt("podaj xa", "");
-        let ya = prompt("podaj ya", "");
-        let xb = prompt("podaj xb", "");
-        let yb = prompt("podaj yb", "");
-        let xc = prompt("podaj xc", "");
-        let yc = prompt("podaj yc", "");
+        function wykonano() {
+          let xa1 = parseFloat(document.getElementById("obwod").value);
+          let ya1 = parseFloat(document.getElementById("obwod1").value);
+          let xb1 = parseFloat(document.getElementById("obwod2").value);
+          let yb1 = parseFloat(document.getElementById("obwod3").value);
+          let xc1 = parseFloat(document.getElementById("obwod4").value);
+          let yc1 = parseFloat(document.getElementById("obwod5").value);
 
-        let xa1 = parseFloat(xa);
-        let ya1 = parseFloat(ya);
-        let xb1 = parseFloat(xb);
-        let yb1 = parseFloat(yb);
-        let xc1 = parseFloat(xc);
-        let yc1 = parseFloat(yc);
+          let ab = ab_kam(xa1, ya1, xb1, yb1);
+          let bc = bc_kam(xb1, yb1, xc1, yc1);
+          let ac = ac_kam(xa1, ya1, xc1, yc1);
 
-        function ab_kam() {
-          return Math.sqrt(Math.pow(xb1 - xa1, 2) + Math.pow(yb1 - ya1, 2));
-        }
-        function bc_kam() {
-          return Math.sqrt(Math.pow(xc1 - xb1, 2) + Math.pow(yc1 - yb1, 2));
-        }
-        function ac_kam() {
-          return Math.sqrt(Math.pow(xa1 - xc1, 2) + Math.pow(ya1 - yc1, 2));
-        }
+          document.getElementById("wyniki").innerHTML =
+            "długość boku ab= " +
+            ab.toFixed(2) +
+            " cm<br>" +
+            "długość boku bc= " +
+            bc.toFixed(2) +
+            " cm<br>" +
+            "długość boku ac= " +
+            ac.toFixed(2) +
+            " cm";
 
-        document.write("długość boku AB = " + ab_kam() + "<br>");
-        document.write("długość boku BC = " + bc_kam() + "<br>");
-        document.write("długość boku AC = " + ac_kam() + "<br>");
+          function ab_kam(xa, ya, xb, yb) {
+            return Math.sqrt(Math.pow(xb1 - xa1, 2) + Math.pow(yb1 - ya1, 2));
+          }
+          function bc_kam(xb, yb, xc, yc) {
+            return Math.sqrt(Math.pow(xc1 - xb1, 2) + Math.pow(yc1 - yb1, 2));
+          }
+          function ac_kam(xa, ya, xc, yc) {
+            return Math.sqrt(Math.pow(xa1 - xc1, 2) + Math.pow(ya1 - yc1, 2));
+          }
+        }
       </script>
     </div>
   </body>

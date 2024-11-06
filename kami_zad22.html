@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="a_dane_kaminski" />
+    <input type="number" id="b_dane_kaminski" />
+    <button onclick="Pole_kaminski()">oblicz obwod</button>
+    <button onclick="obowd_kaminski()">oblicz obwod</button>
+    <br />
+    <span id="1"></span>
+    <br />
+    <span id="2"> </span>
+    <script>
+      function Pole_kaminski() {
+        let a = document.getElementById("a_dane_kaminski").value;
+        let b = document.getElementById("b_dane_kaminski").value;
+        const cos = (document.getElementById("1").innerText = `pole : ${
+          a * b
+        }`);
+      }
+      function obowd_kaminski() {
+        let a = parseFloat(document.getElementById("a_dane_kaminski").value);
+        let b = parseFloat(document.getElementById("b_dane_kaminski").value);
+        const cos = (document.getElementById("2").innerText = `obwod: ${
+          a * 2 + 2 * b
+        }`);
+      }
+    </script>
+  </body>
+</html>
