@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea
+        {
+            width: 1000px;
+            height: 230px;
+        }
+    </style>
+</head>
+<body>
+        <ol>
+            <li>
+                <p>Metoda 1 
+                    Wykorzystując zapis w formie:  <br>
+                    a) <br>
+                    nazwa_obiektu.nazwa_właściwości="tekst";  dla danych w formie tekstu <br>
+                    np. <br>
+                    pojazd.marka="Ford Fiesta"; <br>
+                    b) <br>
+                    nazwa_obiektu.nazwa_właściwości=liczba;  dla danych liczbowych <br>
+                    np. <br>
+                    pojazd.rok=2005; <br>
+                    pojazd.cena=12000; <br>
+                    <br>
+                    Metoda 2 <br>
+                    Stosując zapis w formie:  <br>
+                    nazwa_obiektu[nazwa_właściwości];  <br>
+                    np. pojazd[cena]=12000;</p>
+            </li>
+            <li>
+                <p>Odwoływanie się do pól (właściwości) oraz metod. <br>
+                    Do właściwości oraz metod możemy odnieść się w sposób analogiczny jak do zwykłych zmiennych <br>
+                    czy funkcji, wystarczy poprzedzić ich nazwę nazwą obiektu, który je zawiera, połączoną z kropką. <br>
+                    <br>
+                    np.      console.log(auto1.kolor);  wyświetla kolor danego obiektu auto</p>
+            </li>
+            <li>
+                <p>Kluczowe cechy konstruktora:
+                    <ul>
+                        <li>uruchamia się automatycznie podczas tworzenia obiektu danej klasy na jego rzecz, </li>
+                        <li>nosi taką samą nazwę jak klasa,</li>
+                        <li>nie zwraca żadnej wartości, </li>
+                        <li>może przyjmować argumenty podobnie jak funkcja lub metoda, umożliwiając inicjalizację obiektu przy użyciu operatora new. </li>
+                    </ul>
+                </p>
+            </li>
+            <li>
+                
+            </li>
+            <textarea readonly="true">var osoba_1 = 
+                { 
+                nazwisko : ‘Nowak’, 
+                imie  :’Anna’, 
+                zawod  :’nauczyciel’, 
+                wyswietl :function  () 
+                 { 
+                  Document.write(this.nazwisko + ‘  ‘  +  this.imie) 
+                 } 
+                }  
+                </textarea>
+            <li>
+                <p>Uwaga 1:<br> 
+                    Słowo kluczowe this  umożliwia odwołanie się do właściwości lub metody danego obiektu z jego wnętrza. <br>
+                    Uwaga 2: <br>
+                    Właściwości i metody muszą być oddzielone przecinkami w ramach jednego obiektu.</p>
+            </li>
+            <li>
+                <p>Stworzony zostanie konstruktor o nazwie pracownik z właściwościami nazwisko, imie, zawod oraz 
+                    metodą pokaz(). Właściwości obiektu przypisano wartości parametrów. Słowo kluczowe this wskazuje na obecny obiekt i umożliwia przypisanie wartości parametru do właściwego pola tego obiektu. 
+                </p>
+                <textarea readonly="true"> 
+                        function pracownik(nazwisko_p,imie_p,zawod_p) 
+                        { 
+                         this.nazwisko=nazwisko_p; 
+                         this.imie=imie_p; 
+                         this.zawod=zawod_p; 
+                          
+                        pokaz = function () 
+                          { 
+                            alert(this.nazwisko + ' ' + this.imie) 
+                          } 
+                        }
+                        </textarea>
+            </li>
+            <li>
+                <p>Słowo kluczowe new 
+                    Operator new służy do tworzenia nowego obiektu w oparciu o konstruktor. 
+                    Przykład: 
+                </p>
+                <textarea readonly="true">
+                    var osoba1 = new pracownik('Nowak', 'Anna', 'nauczyciel'); 
+                    var osoba2 = new pracownik('Kowalski', 'Jan', 'programista'); 
+                </textarea><br>
+                Powyżej utworzono dwa obiekty osoba1 i osoba2 będące instancjami klasy pracownik.
+            </li>
+            <li><b>Właściwość prototype</b>
+                Właściwość prototype służy do definiowania metod i właściwości dla wszystkich obiektów utworzonych w oparciu o dany konstruktor.<br>
+                Przykład: <br>
+                <textarea readonly="true">
+                    function pracownik() 
+                    { 
+                     this.nazwisko='Lis'; 
+                     this.imie='Karol'; 
+                     } 
+                    pracownik.prototype.pisz_dane = function () 
+                       { 
+                         document.write(this.nazwisko + ' ' + this.imie) 
+                        } 
+                    pracownik.prototype.zawod = 'inżynier'; 
+                    var osoba1 = new pracownik(); 
+                    osoba1.pisz_dane();
+                </textarea>
+                <p>Opis do przykładu powyżej: 
+                    W definicji konstruktora nie zadeklarowano żadnych metod ani właściwości. Dopiero użycie <br>
+                    właściwości prototype pozwoliło na dodanie metody pisz_dane i właściwości zawod. Od tego momentu każdy nowy obiekt tworzony na podstawie konstruktora pracownik będzie posiadał te elementy.<br>
+                     <b>
+                    Właściwość prototype może także posłużyć do rozszerzenia już istniejących obiektów.</b> 
+                </p>
+            </li>
+        </ol>                                          
+</body>
+</html>
