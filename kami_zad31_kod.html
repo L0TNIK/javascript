@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read-Only Textarea</title>
+  </head>
+  <body>
+    <textarea width="1000" height="600" readonly>
+
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Document</title>
+          <style>
+            body {
+              color: green;
+              font-size: 50px;
+            }
+          </style>
+        </head>
+        <body>
+          <script>
+            let telefon = {
+              siec: "5g",
+              kolor: "czerwony",
+              marka: "iphone",
+              telefon_wyswietl_kaminski: function () {
+                document.write(
+                  "sieć: " +
+                    this.siec +
+                    "<br>" +
+                    "kolor: " +
+                    this.kolor +
+                    "<br>" +
+                    "marka: " +
+                    this.marka +
+                    "<br>" +
+                    "metoda: telefon.wypisz"
+                );
+              },
+            };
+            telefon.telefon_wyswietl_kaminski();
+            telefon.model = 15;
+            telefon.wypisz = function () {
+              alert("model: " + this.model);
+            };
+            telefon.wypisz();
+          </script>
+        </body>
+      </html>
+      
+
+        
+
+      
+    </textarea>
+  </body>
+</html>

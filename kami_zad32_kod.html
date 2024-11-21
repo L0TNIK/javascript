@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read-Only Textarea</title>
+  </head>
+  <body>
+    <textarea width="1000" height="600" readonly>
+
+      <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadanie 32</title>
+    <style>
+      body {
+        color: green;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="output" id="output"></div>
+    <script>
+      function Telefon(siec, kolor, marka) {
+        this.siec = siec;
+        this.kolor = kolor;
+        this.marka = marka;
+      }
+
+      Telefon.prototype.wypisz = function () {
+        return `sieć: ${this.siec}, kolor: ${this.kolor}, marka: ${this.marka}`;
+      };
+
+      Telefon.prototype.model = null;
+
+      Telefon.prototype.telefon_pokaz_nazwisko_kaminski = function () {
+        return `Model: ${this.model}`;
+      };
+
+      const telefon1 = new Telefon("5G", "Czerwony", "iPhone");
+      const telefon2 = new Telefon("4G", "Czarny", "Samsung");
+      const telefon3 = new Telefon("5G", "Biały", "Xiaomi");
+
+      telefon1.model = 15;
+      telefon2.model = 10;
+      telefon3.model = 12;
+
+      const output = document.getElementById("output");
+      output.innerHTML = `
+        <p>Obiekt: Telefon</p>
+        <p>${telefon1.wypisz()}<br>${telefon1.telefon_pokaz_nazwisko_kaminski()}</p>
+        <p>${telefon2.wypisz()}<br>${telefon2.telefon_pokaz_nazwisko_kaminski()}</p>
+        <p>${telefon3.wypisz()}<br>${telefon3.telefon_pokaz_nazwisko_kaminski()}</p>
+        <p>Nowe pole: model</p>
+        <p>Nowa metoda: telefon_pokaz_nazwisko_kaminski</p>
+      `;
+    </script>
+  </body>
+</html>
+
+      
+
+        
+
+      
+    </textarea>
+  </body>
+</html>
