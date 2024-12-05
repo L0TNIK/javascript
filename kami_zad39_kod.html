@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read-Only Textarea</title>
+  </head>
+  <body>
+    <textarea width="1000" height="600" readonly>
+
+      <html>
+  <style>
+    #czerwony {
+      color: red;
+    }
+    #niebieski {
+      color: blue;
+    }
+  </style>
+  <body>
+    <div>
+      <div id="czerwony">1-czerwony</div>
+      <div id="niebieski">2-niebieski</div>
+      <input type="text" placeholder="wpisz kolor..." id="inputKolor" />
+      <button onclick="fun_kam()">sprawdz</button>
+
+      <h1 id="wynik"></h1>
+      <script language="JavaScript">
+        function fun_kam() {
+          var x = document.getElementById("inputKolor").value;
+          const wynik = document.getElementById("wynik");
+
+          if (x == "1") {
+            wynik.innerHTML =
+              "<font color='red' size='4'>wczytałeś kolor czerwony</font>";
+          } else if (x == "2") {
+            wynik.innerHTML =
+              "<font color='blue' size='4'>wczytałeś kolor niebieski</font>";
+          } else {
+            wynik.innerHTML = "Podano nieprawidłowy kolor.";
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>
+
+
+
+    </textarea>
+  </body>
+</html>

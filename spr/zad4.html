@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-size: 15mm;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let kombinacje = 14000000;
+      let czas = 1;
+
+      let czaswszekundach = kombinacje * czas;
+      let czaswminutach = czaswszekundach / 60;
+      let czaswgodzinach = czaswminutach / 60;
+      let czaswdniach = czaswgodzinach / 24;
+
+      document.write(
+        "<p>" +
+          [
+            `Czas: ${czaswszekundach.toFixed(2)} sekund`,
+            `Czas: ${czaswminutach.toFixed(2)} minut`,
+            `Czas: ${czaswgodzinach.toFixed(2)} godzin`,
+            `Czas: ${czaswdniach.toFixed(2)} dni`,
+          ].join("<br />") +
+          "</p>"
+      );
+    </script>
+  </body>
+</html>

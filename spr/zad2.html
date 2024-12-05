@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        font-size: 20px;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let a = +prompt("Podaj A: ");
+      let b = +prompt("Podaj B: ");
+
+      document.write(
+        `${a}^3 + ${b}^3 = (${a} + ${b})((${a})^2 - (${a}) * (${b}) + (${b})^2) = (${
+          a + b
+        })(${a ** 2} - ${a} * ${b} + ${b ** 2}) = ${a ** 3 + b ** 3}`
+      );
+    </script>
+  </body>
+</html>
