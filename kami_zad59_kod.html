@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read-Only Textarea</title>
+  </head>
+  <body>
+    <textarea width="1000" height="600" readonly>
+
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Document</title>
+          <style>
+            body {
+              color: green;
+              font-size: 50px;
+            }
+          </style>
+        </head>
+        <body>
+          <label for="a">podaj wielkosc a</label>
+          <input type="number" id="a" /><br /><br />
+          <input type="button" value="kliknij" + onclick="kratowe()" />
+          <div id="wynik"></div>
+          <script>
+            function kratowe() {
+              let R_kam = document.getElementById("a").value;
+      
+              if (isNaN(R_kam) || R_kam < 0) {
+                alert("Podaj nieujemną liczbę rzeczywistą!");
+                return;
+              }
+      
+              let liczbaPunktowKratowych = 0;
+      
+              for (
+                let x_kam = -Math.floor(R_kam);
+                x_kam <= Math.floor(R_kam);
+                x_kam++
+              ) {
+                for (
+                  let y_kam = -Math.floor(R_kam);
+                  y_kam <= Math.floor(R_kam);
+                  y_kam++
+                ) {
+                  if (x_kam * x_kam + y_kam * y_kam <= R_kam * R_kam) {
+                    liczbaPunktowKratowych++;
+                  }
+                }
+              }
+              document.getElementById("wynik").innerHTML =
+                "promien kola r = " +
+                R_kam +
+                "<br> liczba punktów kratowych: " +
+                liczbaPunktowKratowych;
+            }
+          </script>
+        </body>
+      </html>
+      
+
+    </textarea>
+  </body>
+</html>

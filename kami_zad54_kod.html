@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read-Only Textarea</title>
+  </head>
+  <body>
+    <textarea width="1000" height="600" readonly>
+
+      <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        color: green;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="a">podaj wielkosc a</label>
+    <input type="number" id="a" /><br /><br />
+    <label for="a">podaj wielkosc b</label>
+    <input type="number" id="b" /><br /><br />
+    <input type="button" value="kliknij" onclick="kwadrat_kaminski()" />
+    <div id="wynik"></div>
+
+    <script>
+      function kwadrat_kaminski() {
+        let a_kam = document.getElementById("a").value;
+        let b_kam = document.getElementById("b").value;
+        let kwadrat = "";
+
+        for (let i = 0; i < b_kam; i++) {
+          kwadrat += "*";
+        }
+
+        kwadrat += "<br>";
+        for (let i = 0; i < a_kam - 2; i++) {
+          kwadrat += "*";
+          for (let j = 0; j < (b_kam - 2) * 2; j++) {
+            kwadrat += "\u00A0";
+          }
+          kwadrat += "*<br>";
+        }
+
+        for (let i = 0; i < b_kam; i++) {
+          kwadrat += "*";
+        }
+        document.getElementById("wynik").innerHTML = kwadrat;
+      }
+    </script>
+  </body>
+</html>
+
+
+    </textarea>
+  </body>
+</html>

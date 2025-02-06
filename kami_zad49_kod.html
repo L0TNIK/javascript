@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read-Only Textarea</title>
+  </head>
+  <body>
+    <textarea width="1000" height="600" readonly>
+
+      <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        color: green;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="a">podaj n: </label>
+    <input type="number" id="a" />
+    <input type="button" value="oblicz" onclick="silnia_kam()" />
+    <div id="wynik"></div>
+    <script>
+      function silnia_kam() {
+        let a = parseInt(document.getElementById("a").value);
+        let sil = 1;
+        for (let i = 1; i <= a; i++) {
+          sil = sil * i;
+        }
+        document.getElementById("wynik").innerHTML =
+          "silnia z " + a + " to: " + sil;
+      }
+    </script>
+  </body>
+</html>
+
+
+    </textarea>
+  </body>
+</html>

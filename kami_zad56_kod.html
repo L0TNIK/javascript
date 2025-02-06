@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read-Only Textarea</title>
+  </head>
+  <body>
+    <textarea width="1000" height="600" readonly>
+
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Document</title>
+          <style>
+            body {
+              color: green;
+              font-size: 50px;
+            }
+          </style>
+        </head>
+        <body>
+          <input type="button" value="kliknij" onclick="wzor()" />
+          <div id="wynik"></div>
+          <script>
+            let start = 1;
+            let end = 5;
+            function wzor() {
+              let w;
+              if (start > 39) {
+                document.getElementById("wynik").innerHTML +=
+                  "Nie można już więcej używać tego guzika.";
+                return;
+              }
+              for (let i = start; i <= end; i++) {
+                w = i * i + i + 41;
+                document.getElementById("wynik").innerHTML +=
+                  "w(" + i + ") = " + w + "<br>";
+              }
+              start = start + 5;
+              end = end + 5;
+            }
+          </script>
+        </body>
+      </html>
+      
+
+    </textarea>
+  </body>
+</html>

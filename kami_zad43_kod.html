@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read-Only Textarea</title>
+  </head>
+  <body>
+    <textarea width="1000" height="600" readonly>
+
+      <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        color: green;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="a">podaj liczbe do ktorej ma byc wykonywana petla</label>
+    <input type="number" id="a" />
+    <input type="button" value="guzik" onclick="petla()" />
+    <div id="wynik"></div>
+    <script>
+      function petla() {
+        let a = document.getElementById("a").value;
+
+        for (let i = 2; i <= a; i = i + 2) {
+          document.getElementById("wynik").innerHTML += i + ", ";
+        }
+      }
+    </script>
+  </body>
+</html>
+
+    </textarea>
+  </body>
+</html>

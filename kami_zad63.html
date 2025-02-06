@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tabele zadanie2</title>
+  </head>
+  <body>
+    <script>
+      var Tab_kam = new Array(
+        "Polska",
+        "USA",
+        "węgry",
+        "Niemcy",
+        "Rosja",
+        "Austra",
+        "Kanada"
+      );
+
+      tab_kam.reverse();
+
+      for (i = 0; i < Tab_kam.length; i++) {
+        document.write(Tab_kam[i] + "<br>");
+      }
+      document.write("po dołączeniu elementu<br>");
+      for (i = 0; i < Tab_kam.length; i++) {
+        document.write(Tab_kam[i] + "<br>");
+      }
+      document.write(Tab_kam.push("Daniel") + " ");
+      document.write("Po usunięciu elementu<br>");
+      for (i = 0; i < Tab_kam.length; i++) {
+        document.write(Tab_kam[i] + "<br>");
+      }
+      document.write(Tab_kam.shift() + " ");
+      document.write("Po odwróceniu tablicy<br>");
+      for (i = 0; i < Tab_kam.length; i++) {
+        document.write(Tab_kam[i] + "<br>");
+      }
+      document.write(Tab_kam.reverse());
+    </script>
+  </body>
+</html>

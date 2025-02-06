@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tabele zadanie1</title>
+  </head>
+  <body>
+    <label for="a">podaj liczbe</label>
+    <input type="number" id="a"" /><br /><br />
+    <input type="button" value="kliknij" onclick="liczenie()" />
+    <div id="wynik"></div>
+    <script>
+      function liczenie() {
+        let a = document.getElementById("a").value;
+        var suma_kam = 0;
+        var T_kam = new Array();
+        for (i = 0; i <= a; i++) {
+          T_kam[i] = i;
+          suma_kam = suma_kam + i;
+          document.write("T[" + i + "]=" + T_kam[i] + "<br>");
+        }
+        var srednia_kam = suma_kam / i;
+        document.getElementById("wynik").innerHTML =
+          "suma=" + suma_kam + "<br>";
+        document.getElementById("wynik").innerHTML =
+          "średnia=" + srednia_kam.toFixed(2) + "<br>";
+      }
+    </script>
+  </body>
+</html>

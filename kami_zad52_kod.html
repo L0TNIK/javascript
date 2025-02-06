@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read-Only Textarea</title>
+  </head>
+  <body>
+    <textarea width="1000" height="600" readonly>
+
+      <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        color: green;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="button" value="kliknij" onclick="kwadrat_kaminski()" />
+    <div id="wynik"></div>
+
+    <script>
+      function kwadrat_kaminski() {
+        let imie = "jakub";
+        let nazwisko = "kaminski";
+
+        let a_kam = (nazwisko.length % 4) + 5;
+        let b_kam = (imie.length % 4) + 20;
+        let kwadrat = "";
+
+        for (let i = 0; i < b_kam; i++) {
+          kwadrat += "*";
+        }
+
+        kwadrat += "<br>";
+        for (let i = 0; i < a_kam - 2; i++) {
+          kwadrat += "*";
+          for (let j = 0; j < (b_kam - 2) * 2; j++) {
+            kwadrat += "\u00A0";
+          }
+          kwadrat += "*<br>";
+        }
+
+        for (let i = 0; i < b_kam; i++) {
+          kwadrat += "*";
+        }
+        document.getElementById("wynik").innerHTML = kwadrat;
+      }
+    </script>
+  </body>
+</html>
+
+
+
+    </textarea>
+  </body>
+</html>

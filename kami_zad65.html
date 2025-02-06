@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function porownaj(a, b) {
+        return a - b;
+      }
+
+      const sortArray = (arr) => {
+        const strings = [],
+          numbers = [];
+
+        for (const element of arr) {
+          (typeof element === "number" ? numbers : strings).push(element);
+        }
+
+        return [...strings.sort(), numbers.sort((a, b) => a - b)];
+      };
+      let tab_kam = new Array(
+        "a",
+        "f",
+        "g",
+        "c",
+        "s",
+        "p",
+        "y",
+        12,
+        54,
+        13,
+        65,
+        9,
+        47
+      );
+      document.write("przed sortowaniem<br>");
+      for (let i = 0; i < tab_kam.length; i++) {
+        document.write(tab_kam[i] + "<br>");
+      }
+      document.write("po sortowaniu<br>");
+      tab_kam.sort(porownaj);
+      for (let i = 0; i < tab_kam.length; i++) {
+        document.write(tab_kam[i] + "<br>");
+      }
+
+      document.write("<h3> to drugie sortowanie </h3><br>");
+      const newArray = sortArray(tab_kam);
+      for (const element of newArray) {
+        document.write(element + "<br />");
+      }
+    </script>
+  </body>
+</html>
